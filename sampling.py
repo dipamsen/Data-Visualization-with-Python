@@ -14,7 +14,7 @@ def randomData(counter):
     dataset = []
     for i in range(0, counter):
         index = random.randint(0, len(temperatures))
-        # dataset.append(temperatures[index])
+        dataset.append(temperatures[index])
     mean = statistics.mean(dataset)
     return mean
 
@@ -33,28 +33,11 @@ def main():
         mean = randomData(100)
         meanlist.append(mean)
     print("Normal Data")
-
+    print("Mean: ", statistics.mean(meanlist))
+    print("Std Dev: ", statistics.stdev(meanlist))
     plotMean(meanlist)
 
 
 main()
-mean = statistics.mean(temperatures)
-print("Mean is ", mean)
-# fig = ff.create_distplot([temperatures], ["Temperature"], show_hist=False)
-
-# fig.show()
-
-stdev = statistics.stdev(temperatures)
-print("Standard Deviation: ", stdev)
-
-# sample = []
-# for i in range(0, 1000):
-#     index = random.randint(0, len(temperatures))
-#     sample.append(temperatures[index])
-# sampleInfo = {
-#     "mean": statistics.mean(sample),
-#     "stdev": statistics.stdev(sample)
-# }
-# print("Sample Info")
-# print("Mean: ", sampleInfo["mean"])
-# print("Standard Deviation: ", sampleInfo["stdev"])
+# mean = statistics.mean(temperatures)
+# print("Mean is ", mean)
