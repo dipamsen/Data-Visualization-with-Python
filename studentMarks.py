@@ -15,14 +15,14 @@ mean3 = statistics.mean(data3)
 fig = ff.create_distplot([])
 
 
-def randomStudents(count):
-    dataset = []
-    for i in range(0, count):
-        index = random.randint(0, len(data)-1)
-        dataset.append(data[index])
-    mean = statistics.mean(dataset)
+# def randomStudents(count):
+#     dataset = []
+#     for i in range(0, count):
+#         index = random.randint(0, len(data)-1)
+#         dataset.append(data[index])
+#     mean = statistics.mean(dataset)
 
-    return mean
+#     return mean
 
 
 meanlist = []
